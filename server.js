@@ -37,13 +37,13 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    welcomeMessage: 'Hello Alex, welcome to your first Express.js website',
+    welcomeMessage: 'Hello!! Welcome to my first Express.js website',
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About Page',
+    pageTitle: 'About Page'
   });
 });
 
@@ -51,6 +51,12 @@ app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to handle request'
   })
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
+  });
 });
 
 app.listen(port, () => {
